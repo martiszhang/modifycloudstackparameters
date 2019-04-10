@@ -1,0 +1,9 @@
+---
+- hosts: 127.0.0.1
+  tasks:
+     - name: modify cloudstack parameter
+       local_action:
+         module: cs_configuration
+         name: "{{ parameter_name }}" 
+         value: "{{ value }}"
+         api_region: "{{ api_region }}"  
